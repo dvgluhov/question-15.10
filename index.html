@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var n, m;
+        // var rect = {
+        //     x1: 1,
+        //     y1: 5,
+        //     x2: 6,
+        //     y2: 2
+        // };
+
+        // // // Задача1
+        // function objPropertes(givenObject) {
+        //     let str = "Свойства данного объекта:";
+        //     for (var temProperty in givenObject)
+        //         str += "\n" + temProperty + ": " + givenObject[temProperty];
+        //     alert(str);
+
+        // }
+        // // objPropertes(rect);
+
+
+        // // // Задача2
+        // // function rectSizes(givenRect){
+        // //     alert ("Ширина прямоугольника =" + (givenRect.x2 - givenRect.x1) + "\nВысота прямоугольника =" + (givenRect.y1 - givenRect.y2));
+        // // }
+        // // rectSizes(rect);
+
+        // // // Задача3
+        // // n = +prompt ("На сколько вы хотите поменять ширину?");
+        // // m = +prompt ("На сколько вы хотите поменять высота?");
+        // // function changedSizes(givenRect){
+        // //     alert ("измененная ширина прямоугольника =" + (givenRect.x2 - givenRect.x1 + n) + "\n Изменённая высота прямоугольника =" + (givenRect.y1 - givenRect.y2 + m)+ ".");
+        // // }
+        // // changedSizes(rect);
+
+
+        // // Задача4
+        // n = +prompt("На сколько вы хотите сдвинуть прямоугольник по Х?");
+        // m = +prompt("На сколько вы хотите сдвинуть прямоугольник по Y?");
+        // function moveRect(givenRect) {
+        //     givenRect.x1 += n; givenRect.x2 += n;
+        //     givenRect.y1 += m; givenRect.y2 += m;
+        //     objPropertes(givenRect);
+        // }
+        // moveRect(rect);
+
+
+        // // Задача4
+        // n = +prompt("Введите Х?");
+        // m = +prompt("Введите Y?");
+        // function checkDot(givenRect) {
+        //     if (n >= givenRect.x1 && n <= givenRect.x2 && m >= givenRect.y2 && m <= givenRect.y1)
+        //         alert("Точка (" + n + "; " + m + ") находится внутри прямоугольника");
+        //     else
+        //         alert("Точка (" + n + "; " + m + ")  не находится внутри прямоугольника");
+        // }
+        // checkDot(rect)
+
+        // Домашнее задание 3
+        // задание 2
+        var n, m, max = 0;
+        // n = +prompt("Задача 2.\n Введите первое число", "");
+        // m = +prompt("Введите второе число", "");
+        // for (i = 1; i <= n && i <= m; i++)
+        //     if (n % i == 0 && m % i == 0 && i>max)
+        //     max=i;
+        //     alert (max);
+
+        // задание 4
+        // n = +prompt("Задача 4.\n Введите число", "");
+        // k = 1;
+
+        //        while (n >= 10) {
+        //     n /= 10;
+        //     k++;
+
+        // }
+
+        // alert("Kоличество цифр " + k);
+
+
+        // задание 10
+        alert("Загадайте число от 0 до 100\n а я попробую отгадать");
+        n = 50;
+        nMax = 100;
+        nMin = 0;
+        while (m != "=") {
+            m = prompt("Ваше число больше, меньше или равно " + n + "?");
+            switch (m) {
+                case ">": nMin=n; n = Math.round ((n + nMax) / 2); break;
+                case "<": nMax=n; n = Math.round ((n + nMin) / 2); break;
+                case "=": alert ("Ура я угадал"); break;
+                default: alert ("Такого символа нет");
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
